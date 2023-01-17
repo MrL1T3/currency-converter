@@ -13,3 +13,7 @@ export default function getConversion(currency) {
     }
   });
 }
+
+function printElements(apiResponse, currency) {
+  document.querySelector('#showResponse').innerText = 'The conversion of USD to ${currency} is ${apiResponse.conversion_rate}.';
+}
