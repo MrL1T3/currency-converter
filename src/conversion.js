@@ -17,3 +17,14 @@ export default function getConversion(currency) {
 function printElements(apiResponse, currency) {
   document.querySelector('#showResponse').innerText = 'The conversion of USD to ${currency} is ${apiResponse.conversion_rate}.';
 }
+
+function handleFormSubmission(event) {
+  event.preventDefault();
+  const city = document.querySelector('#location').value;
+  document.querySelector('#location').value = null;
+  getWeather(city);
+}
+
+window.addEventListener("load", function() {
+  document.querySelector('form').addEventListener("submit", handleFormSubmission);
+});
