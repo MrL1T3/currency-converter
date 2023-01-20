@@ -28,5 +28,8 @@ window.addEventListener("load", function() {
   }
 
   console.log("Requesting conversion rate");
-  getConversion('EUR', handleConversionResponse);
+  // getConversion('EUR', handleConversionResponse);
 });
+
+const submitButton = document.getElementById("convert-button");
+submitButton.addEventListener("click", getConversion('EUR', handleConversionResponse));
