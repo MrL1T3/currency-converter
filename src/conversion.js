@@ -10,7 +10,6 @@ export default function getConversion(currency, handleResponse) {
     console.log(this.responseText);
     const response = JSON.parse(this.responseText)
     if (this.status === 200) {
-      // printElements(response, currency);
       handleResponse(response.conversion_rate, currency);
     }
   });
