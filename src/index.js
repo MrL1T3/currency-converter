@@ -1,12 +1,9 @@
 // import 'conversion.js';
 import getConversion from "./conversion";
+import convertCash from "./conversion";
 
 console.log("Loaded index.js");
 
-function handleConversionResponse(conversion_rate, currency) {
-  printElements(conversion_rate, currency);
-}
-  
 function printElements(conversion_rate, currency) {
   document.querySelector('#showResponse').innerText = `The conversion of USD to ${currency} is ${conversion_rate}.`;
 }
@@ -30,6 +27,6 @@ window.addEventListener("load", function() {
   const convertButton = this.document.getElementById('convert-button');
   const currencyCode = document.getElementById('currency-code');
   convertButton.addEventListener("click", function() {
-    getConversion(currencyCode.value, handleConversionResponse);
+    getConversion(currencyCode.value, printElements);
   });
 });
