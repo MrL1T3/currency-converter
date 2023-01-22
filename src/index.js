@@ -11,7 +11,6 @@ function printElements(conversion_rate, currency) {
   document.querySelector('#showResponse').innerText = `The conversion of USD to ${currency} is ${conversion_rate}.`;
 }
 
-
 function handleFormSubmission(event) {
   event.preventDefault();
   const city = document.querySelector('#location').value;
@@ -28,8 +27,9 @@ window.addEventListener("load", function() {
   }
 
   console.log("Requesting conversion rate");
-  // getConversion('EUR', handleConversionResponse);
+  const convertButton = this.document.getElementById('convert-button');
+  const currencyCode = document.getElementById('currency-code');
+  convertButton.addEventListener("click", function() {
+    getConversion(currencyCode.value, handleConversionResponse);
+  });
 });
-
-const submitButton = document.getElementById("convert-button");
-submitButton.addEventListener("click", getConversion('EUR', handleConversionResponse));
