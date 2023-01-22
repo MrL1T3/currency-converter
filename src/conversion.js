@@ -14,3 +14,8 @@ export default function getConversion(currency, handleResponse) {
   request.open('GET', url);
   request.send();
 }
+
+export function convertCash(dollars, convertRate) {
+  convertedMoney = dollars * convertRate
+  return convertedMoney
+}
