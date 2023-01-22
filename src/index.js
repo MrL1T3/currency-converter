@@ -4,9 +4,9 @@ import getConversion from "./conversion";
 console.log("Loaded index.js");
 
 function printElements(conversion_rate, currency) {
-  const inputCash = document.querySelector('#starting-money').value
-  const finalValue = inputCash * conversion_rate
-  document.querySelector('#showResponse').innerText = "The conversion of " + inputCash + " USD to " + currency + " is " + finalValue;
+  const inputCash = document.querySelector('#starting-money').value;
+  const finalValue = inputCash * conversion_rate;
+  document.querySelector('#showResponse').innerText = "The conversion of " + inputCash + " USD to " + currency + " is " + finalValue.toFixed(2);
 }
 
 function handleFormSubmission(event) {
