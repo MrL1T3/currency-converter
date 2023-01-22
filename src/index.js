@@ -1,11 +1,12 @@
 // import 'conversion.js';
 import getConversion from "./conversion";
-import convertCash from "./conversion";
 
 console.log("Loaded index.js");
 
 function printElements(conversion_rate, currency) {
-  document.querySelector('#showResponse').innerText = `The conversion of USD to ${currency} is ${conversion_rate}.`;
+  const inputCash = document.querySelector('#starting-money').value
+  const finalValue = inputCash * conversion_rate
+  document.querySelector('#showResponse').innerText = "The conversion of " + inputCash + " USD to " + currency + " is " + finalValue;
 }
 
 function handleFormSubmission(event) {
