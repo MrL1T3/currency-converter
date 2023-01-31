@@ -21,7 +21,12 @@ Webpage that asks the user for an amount of United States Dollars and the three 
 ## Setup/Installation Requirements
 
 * Fork and/or clone repository to location of choice
-* Navigate to repository within terminal and run 'npm install' to download webpack and the dependencies used
+* Navigate to repository within terminal
+* Create a .env file in the root of the directory
+* Sign up for ExchangeRate-API (https://www.exchangerate-api.com/) and get a free use key
+* Assign your key to a varable named API_KEY (API_KEY = your key here)
+* Navigate back to root of directory
+* Run 'npm install' to download webpack and the dependencies used
 * Run 'npm run build' to build up and set launch ready webpage and js file
 * Run 'npm run start' to launch the application webpage in user's default browser
 
