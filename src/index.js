@@ -1,4 +1,4 @@
-import getConversion from "./conversion";
+import convertHandler from "./conversion";
 
 function printElements(conversion_rate, currency) {
   const inputCash = document.querySelector('#starting-money').value;
@@ -21,6 +21,6 @@ window.addEventListener("load", function() {
   const convertButton = this.document.getElementById('convert-button');
   const currencyCode = document.getElementById('currency-code');
   convertButton.addEventListener("click", function() {
-    getConversion(currencyCode.value, printElements);
+    convertHandler.getConversion(currencyCode.value, printElements);
   });
 });
